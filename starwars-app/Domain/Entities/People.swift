@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct People: Codable {
+    let name: String
+    let height: Double
+    let mass: Double
+    let hair_color: String
+    let skin_color: String
+    let eye_color: String
+    let birth_year: String
+    let gender: String
+}
