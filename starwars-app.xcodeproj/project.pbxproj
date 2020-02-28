@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		7811A20E240943BE0065BE56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7811A20C240943BE0065BE56 /* Main.storyboard */; };
 		7811A210240943BF0065BE56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7811A20F240943BF0065BE56 /* Assets.xcassets */; };
 		7811A213240943BF0065BE56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7811A211240943BF0065BE56 /* LaunchScreen.storyboard */; };
+		7811A21F24094C980065BE56 /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A21E24094C980065BE56 /* MoyaService.swift */; };
+		7811A22924094ED20065BE56 /* BaseAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A22824094ED20065BE56 /* BaseAPIResponse.swift */; };
+		7811A22B2409502B0065BE56 /* PeopleAPIReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A22A2409502B0065BE56 /* PeopleAPIReponse.swift */; };
+		7811A22D240950B80065BE56 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A22C240950B80065BE56 /* People.swift */; };
 		B26E8B6398A7ED907C1EE3A5 /* Pods_starwars_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D3F0BBEE7F3CA968E63610 /* Pods_starwars_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		7811A20F240943BF0065BE56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7811A212240943BF0065BE56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7811A214240943BF0065BE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7811A21E24094C980065BE56 /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
+		7811A22824094ED20065BE56 /* BaseAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIResponse.swift; sourceTree = "<group>"; };
+		7811A22A2409502B0065BE56 /* PeopleAPIReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAPIReponse.swift; sourceTree = "<group>"; };
+		7811A22C240950B80065BE56 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		91C0A0BC54594477EF0BE853 /* Pods-starwars-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-app.release.xcconfig"; path = "Target Support Files/Pods-starwars-app/Pods-starwars-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +56,6 @@
 				735B8F02850FA51D1016E1E4 /* Pods-starwars-app.debug.xcconfig */,
 				91C0A0BC54594477EF0BE853 /* Pods-starwars-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,9 +80,11 @@
 		7811A205240943BE0065BE56 /* starwars-app */ = {
 			isa = PBXGroup;
 			children = (
+				7811A22224094CF70065BE56 /* Presentation */,
+				7811A22024094CD70065BE56 /* Domain */,
+				7811A22124094CE30065BE56 /* Data */,
+				7811A21C240949E40065BE56 /* Infrastructure */,
 				7811A21A2409466D0065BE56 /* Resources */,
-				7811A20A240943BE0065BE56 /* ViewController.swift */,
-				7811A20C240943BE0065BE56 /* Main.storyboard */,
 			);
 			path = "starwars-app";
 			sourceTree = "<group>";
@@ -90,6 +99,88 @@
 				7811A214240943BF0065BE56 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		7811A21C240949E40065BE56 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				7811A21D24094C8A0065BE56 /* Services */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		7811A21D24094C8A0065BE56 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7811A21E24094C980065BE56 /* MoyaService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7811A22024094CD70065BE56 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7811A22324094D270065BE56 /* Entities */,
+				7811A22424094D350065BE56 /* UseCase */,
+				7811A22524094D4B0065BE56 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7811A22124094CE30065BE56 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7811A22624094D6B0065BE56 /* RepositoryImpl */,
+				7811A22724094DC80065BE56 /* RemoteStorage */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7811A22224094CF70065BE56 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				7811A20A240943BE0065BE56 /* ViewController.swift */,
+				7811A20C240943BE0065BE56 /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7811A22324094D270065BE56 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7811A22C240950B80065BE56 /* People.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7811A22424094D350065BE56 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		7811A22524094D4B0065BE56 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7811A22624094D6B0065BE56 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		7811A22724094DC80065BE56 /* RemoteStorage */ = {
+			isa = PBXGroup;
+			children = (
+				7811A22824094ED20065BE56 /* BaseAPIResponse.swift */,
+				7811A22A2409502B0065BE56 /* PeopleAPIReponse.swift */,
+			);
+			path = RemoteStorage;
 			sourceTree = "<group>";
 		};
 		7B389E45AF0C3497E02BBA36 /* Frameworks */ = {
@@ -216,8 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7811A20B240943BE0065BE56 /* ViewController.swift in Sources */,
+				7811A22B2409502B0065BE56 /* PeopleAPIReponse.swift in Sources */,
 				7811A207240943BE0065BE56 /* AppDelegate.swift in Sources */,
 				7811A209240943BE0065BE56 /* SceneDelegate.swift in Sources */,
+				7811A21F24094C980065BE56 /* MoyaService.swift in Sources */,
+				7811A22924094ED20065BE56 /* BaseAPIResponse.swift in Sources */,
+				7811A22D240950B80065BE56 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
