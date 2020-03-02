@@ -9,4 +9,6 @@ target 'starwars-app' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Moya/RxSwift'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 end

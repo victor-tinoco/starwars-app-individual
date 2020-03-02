@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>931128243621-q5kalrinhe1m76eb5e786p3r31pinj9t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.931128243621-q5kalrinhe1m76eb5e786p3r31pinj9t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDhG1FksliVTWdOWoMxp9jM6DwGWbcc1bo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>931128243621</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.tinoco.starwars-app</string>
+	<key>PROJECT_ID</key>
+	<string>starwars-cf1dc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>starwars-cf1dc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:931128243621:ios:2146d6d3bbafa25c85644c</string>
+	<key>DATABASE_URL</key>
+	<string>https://starwars-cf1dc.firebaseio.com</string>
+</dict>
+</plist>

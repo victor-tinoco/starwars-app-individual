@@ -24,3 +24,4 @@ class StartViewModel: StartViewModelProtocol {
         return "É bom te ver novamente."
     }
 }
+

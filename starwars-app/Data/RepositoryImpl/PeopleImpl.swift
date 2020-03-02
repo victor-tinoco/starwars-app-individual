@@ -11,10 +11,10 @@ import RxCocoa
 import RxSwift
 
 class PeopleImpl: PeopleRepository {
-    let peopleService = PeopleService()
+    private let _peopleService = PeopleService()
     
     var people: Single<[People]> {
-        let peopleList: Single<BaseAPIResponse> = peopleService.getDecodedResponse()
+        let peopleList: Single<BaseAPIResponse> = _peopleService.getDecodedResponse()
         return peopleList.map { (base) in
             return base.mapToPeople()
         }

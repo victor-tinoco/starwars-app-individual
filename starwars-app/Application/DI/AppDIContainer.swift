@@ -9,13 +9,8 @@
 import UIKit
 
 class AppDIContainer {
-    static func makeStartViewController() -> StartViewController {
+    func makeStartViewController() -> StartViewController {
         let vm = StartViewModel()
-        return StartViewController.instantiate(viewModel: vm)!
-    }
-    
-    static func makeLoginViewController() -> LoginViewController {
-        let vm = LoginViewModel()
-        return LoginViewController.instantiate(viewModel: vm)!
+        return StartViewController.instantiate(viewModel: vm, DIProtocol: self)!
     }
 }

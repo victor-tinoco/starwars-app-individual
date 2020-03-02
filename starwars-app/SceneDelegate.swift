@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -17,8 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = AppDIContainer.makeStartViewController()
+        let navig = UINavigationController(rootViewController: AppDIContainer().makeStartViewController())
+        navig.isNavigationBarHidden = true
+        window?.rootViewController = navig
         window?.makeKeyAndVisible()
+        
+        return 
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -51,4 +56,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
