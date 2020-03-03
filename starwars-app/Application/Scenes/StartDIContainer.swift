@@ -15,6 +15,6 @@ protocol StartViewControllerDIProtocol {
 extension AppDIContainer: StartViewControllerDIProtocol {
     func makeNextPage() -> UIViewController {
         let vm = LoginViewModel(authUseCase: AuthUseCase(authRepository: AuthImpl()))
-        return LoginViewController.instantiate(viewModel: vm)!
+        return LoginViewController.instantiate(viewModel: vm, DIProtocol: self)!
     }
 }

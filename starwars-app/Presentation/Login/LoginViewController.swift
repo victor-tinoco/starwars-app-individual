@@ -17,7 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    private var _viewModel: LoginViewModelProtocol?
+    private var _DIProtocol: LoginViewControllerDIProtocol?
+    private var _viewModel: LoginViewModelContract?
     private let _disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -26,10 +27,11 @@ class LoginViewController: UIViewController {
         bind()
     }
     
-    static func instantiate(viewModel: LoginViewModelProtocol) -> LoginViewController? {
+    static func instantiate(viewModel: LoginViewModelContract, DIProtocol: LoginViewControllerDIProtocol) -> LoginViewController? {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: LoginViewController.self))
         guard let vc = storyboard.instantiateViewController(withIdentifier: LoginViewController.storyboardIdentifier) as? LoginViewController else { return nil }
         vc._viewModel = viewModel
+        vc._DIProtocol = DIProtocol
         return vc
     }
     
@@ -66,7 +68,15 @@ class LoginViewController: UIViewController {
         }.disposed(by: _disposeBag)
         
         self._viewModel?.loginResultState.drive(onNext: { (state) in
-            print("Estado do resultado do login -> \(state)")
+            switch (state) {
+            case .success:
+                guard let vc = self._DIProtocol?.didLoginSuccess() else { return }
+                UIApplication.shared.keyWindow?.rootViewController =  UINavigationController(rootViewController: vc)
+            case .noInternet: break
+                
+            case .accessDenied: break
+                
+            }
             self.loginButton.isEnabled = true
         }).disposed(by: self._disposeBag)
     }

@@ -22,6 +22,10 @@
 		7811A2332409563C0065BE56 /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A2322409563C0065BE56 /* PeopleService.swift */; };
 		7811A23524095C3C0065BE56 /* PeopleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A23424095C3C0065BE56 /* PeopleUseCase.swift */; };
 		7811A238240977AC0065BE56 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7811A237240977AC0065BE56 /* StartViewModel.swift */; };
+		781C600E240E8E89002FADA8 /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781C600D240E8E89002FADA8 /* People.storyboard */; };
+		781C6011240E9039002FADA8 /* PeoplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6010240E9039002FADA8 /* PeoplesListViewController.swift */; };
+		781C6013240E9305002FADA8 /* PeoplesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6012240E9305002FADA8 /* PeoplesListViewModel.swift */; };
+		781C6016240E9801002FADA8 /* LoginDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6015240E9800002FADA8 /* LoginDIContainer.swift */; };
 		783CF704240D6AC800A57C6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 783CF703240D6AC800A57C6C /* GoogleService-Info.plist */; };
 		78973AAB240D3EDE00BE551D /* StartDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78973AAA240D3EDE00BE551D /* StartDIContainer.swift */; };
 		78AB12F124098E1B00C2B7A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB12F024098E1B00C2B7A8 /* LoginViewController.swift */; };
@@ -56,6 +60,10 @@
 		7811A2322409563C0065BE56 /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		7811A23424095C3C0065BE56 /* PeopleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleUseCase.swift; sourceTree = "<group>"; };
 		7811A237240977AC0065BE56 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		781C600D240E8E89002FADA8 /* People.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = People.storyboard; sourceTree = "<group>"; };
+		781C6010240E9039002FADA8 /* PeoplesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListViewController.swift; sourceTree = "<group>"; };
+		781C6012240E9305002FADA8 /* PeoplesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListViewModel.swift; sourceTree = "<group>"; };
+		781C6015240E9800002FADA8 /* LoginDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginDIContainer.swift; path = "/Users/victor.tinoco/Documents/src/starwars-app/starwars-app/Application/Scenes/LoginDIContainer.swift"; sourceTree = "<absolute>"; };
 		783CF703240D6AC800A57C6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78973AAA240D3EDE00BE551D /* StartDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDIContainer.swift; sourceTree = "<group>"; };
 		78AB12F024098E1B00C2B7A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -177,9 +185,10 @@
 		7811A22224094CF70065BE56 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				781C600C240E8E13002FADA8 /* Storyboards */,
 				7811A236240977990065BE56 /* Start */,
 				78E0449F24098CA3000A7789 /* Login */,
-				7811A20C240943BE0065BE56 /* Main.storyboard */,
+				781C600F240E9009002FADA8 /* Peoples-List */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -237,9 +246,28 @@
 			path = Start;
 			sourceTree = "<group>";
 		};
+		781C600C240E8E13002FADA8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7811A20C240943BE0065BE56 /* Main.storyboard */,
+				781C600D240E8E89002FADA8 /* People.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		781C600F240E9009002FADA8 /* Peoples-List */ = {
+			isa = PBXGroup;
+			children = (
+				781C6010240E9039002FADA8 /* PeoplesListViewController.swift */,
+				781C6012240E9305002FADA8 /* PeoplesListViewModel.swift */,
+			);
+			path = "Peoples-List";
+			sourceTree = "<group>";
+		};
 		78973AA9240D3EB900BE551D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				781C6015240E9800002FADA8 /* LoginDIContainer.swift */,
 				78973AAA240D3EDE00BE551D /* StartDIContainer.swift */,
 			);
 			path = Scenes;
@@ -357,6 +385,7 @@
 			files = (
 				7811A213240943BF0065BE56 /* LaunchScreen.storyboard in Resources */,
 				783CF704240D6AC800A57C6C /* GoogleService-Info.plist in Resources */,
+				781C600E240E8E89002FADA8 /* People.storyboard in Resources */,
 				7811A210240943BF0065BE56 /* Assets.xcassets in Resources */,
 				7811A20E240943BE0065BE56 /* Main.storyboard in Resources */,
 			);
@@ -413,6 +442,8 @@
 			files = (
 				78AB12F124098E1B00C2B7A8 /* LoginViewController.swift in Sources */,
 				7811A20B240943BE0065BE56 /* StartViewController.swift in Sources */,
+				781C6011240E9039002FADA8 /* PeoplesListViewController.swift in Sources */,
+				781C6016240E9801002FADA8 /* LoginDIContainer.swift in Sources */,
 				78CF33C5240D769700D4C401 /* AuthRepository.swift in Sources */,
 				78D0C62124099FA900F2D547 /* AppDIContainer.swift in Sources */,
 				78CF33C3240D738A00D4C401 /* AuthService.swift in Sources */,
@@ -431,6 +462,7 @@
 				7811A22F2409551C0065BE56 /* PeopleRepository.swift in Sources */,
 				78CF33CF240D8BF100D4C401 /* Connectivity.swift in Sources */,
 				78D0C6262409A46F00F2D547 /* UIViewController.swift in Sources */,
+				781C6013240E9305002FADA8 /* PeoplesListViewModel.swift in Sources */,
 				7811A22D240950B80065BE56 /* People.swift in Sources */,
 				78973AAB240D3EDE00BE551D /* StartDIContainer.swift in Sources */,
 			);

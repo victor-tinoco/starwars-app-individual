@@ -16,7 +16,7 @@ enum loginResultStates {
     case noInternet
 }
 
-protocol LoginViewModelProtocol {
+protocol LoginViewModelContract {
     var loginResultState: Driver<loginResultStates> { get }
     
     var title: String { get }
@@ -26,7 +26,7 @@ protocol LoginViewModelProtocol {
     func makeLogin(email: String, password: String)
 }
 
-class LoginViewModel: LoginViewModelProtocol {
+class LoginViewModel: LoginViewModelContract {
     private let _disposeBag = DisposeBag()
     private var _authUseCase: AuthUseCaseContract
     private var _loginResultStateRelay: PublishRelay<loginResultStates> = PublishRelay()

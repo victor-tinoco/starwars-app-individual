@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/victor.tinoco/Documents/src/starwars-app/starwars-app/Application/Scenes/LoginDIContainer.swift">
+   </FileRef>
+   <FileRef
       location = "group:starwars-app.xcodeproj">
    </FileRef>
    <FileRef
