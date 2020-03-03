@@ -51,8 +51,7 @@ public extension MoyaService {
         return Single.create { single in
             let request = self.apiProvider.rx.request(self)
             let dispose = request.subscribe(onSuccess: { (response) in
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let decoder = JSONDecoder() 
                 do {
                     let object = try decoder.decode(T.self, from: response.data)
                     single(.success(object))

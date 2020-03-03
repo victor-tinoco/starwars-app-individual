@@ -25,10 +25,28 @@
                         <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <viewLayoutGuide key="safeArea" id="Ub9-wh-e4O"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Q7f-4v-ifI" id="j3c-IF-Gpl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgc-MX-H0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="-126.5625"/>
+        </scene>
+        <!--People Details View Controller-->
+        <scene sceneID="yUK-uU-QbS">
+            <objects>
+                <viewController storyboardIdentifier="PeopleDetailsViewController" id="O8w-m7-O9D" customClass="PeopleDetailsViewController" customModule="starwars_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ton-PZ-J1C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bZN-KI-TZW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCO-q5-S7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="-127"/>
         </scene>
     </scenes>
 </document>

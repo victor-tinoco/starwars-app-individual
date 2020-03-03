@@ -10,7 +10,7 @@ import Foundation
 
 class PeopleService: MoyaService {
     override var baseURL: URL {
-        return URL(string: "https://swapi.co/api/")!
+        return URL(string: "http://mock.iteris.local:8888/")!
     }
     
     override var path: String {

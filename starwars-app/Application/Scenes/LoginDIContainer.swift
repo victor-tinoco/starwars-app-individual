@@ -13,7 +13,7 @@ protocol LoginViewControllerDIProtocol {
 
 extension AppDIContainer: LoginViewControllerDIProtocol {
     func didLoginSuccess() -> UIViewController {
-        let vm = PeoplesListViewModel()
-        return PeoplesListViewController.instantiate(viewModel: vm)!
+        let vm = PeoplesListViewModel(useCase: PeopleUseCase(peopleRepository: PeopleImpl()))
+        return PeoplesListViewController.instantiate(viewModel: vm, DIProtocol: self)!
     }
 }

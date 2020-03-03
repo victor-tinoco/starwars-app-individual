@@ -26,6 +26,9 @@
 		781C6011240E9039002FADA8 /* PeoplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6010240E9039002FADA8 /* PeoplesListViewController.swift */; };
 		781C6013240E9305002FADA8 /* PeoplesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6012240E9305002FADA8 /* PeoplesListViewModel.swift */; };
 		781C6016240E9801002FADA8 /* LoginDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6015240E9800002FADA8 /* LoginDIContainer.swift */; };
+		781C6019240EC021002FADA8 /* PeopleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C6018240EC021002FADA8 /* PeopleDetailsViewController.swift */; };
+		781C601B240EC054002FADA8 /* PeopleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C601A240EC054002FADA8 /* PeopleDetailsViewModel.swift */; };
+		781C601D240EC55E002FADA8 /* PeoplesListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781C601C240EC55E002FADA8 /* PeoplesListDIContainer.swift */; };
 		783CF704240D6AC800A57C6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 783CF703240D6AC800A57C6C /* GoogleService-Info.plist */; };
 		78973AAB240D3EDE00BE551D /* StartDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78973AAA240D3EDE00BE551D /* StartDIContainer.swift */; };
 		78AB12F124098E1B00C2B7A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB12F024098E1B00C2B7A8 /* LoginViewController.swift */; };
@@ -64,6 +67,9 @@
 		781C6010240E9039002FADA8 /* PeoplesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListViewController.swift; sourceTree = "<group>"; };
 		781C6012240E9305002FADA8 /* PeoplesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListViewModel.swift; sourceTree = "<group>"; };
 		781C6015240E9800002FADA8 /* LoginDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginDIContainer.swift; path = "/Users/victor.tinoco/Documents/src/starwars-app/starwars-app/Application/Scenes/LoginDIContainer.swift"; sourceTree = "<absolute>"; };
+		781C6018240EC021002FADA8 /* PeopleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewController.swift; sourceTree = "<group>"; };
+		781C601A240EC054002FADA8 /* PeopleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsViewModel.swift; sourceTree = "<group>"; };
+		781C601C240EC55E002FADA8 /* PeoplesListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesListDIContainer.swift; sourceTree = "<group>"; };
 		783CF703240D6AC800A57C6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78973AAA240D3EDE00BE551D /* StartDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDIContainer.swift; sourceTree = "<group>"; };
 		78AB12F024098E1B00C2B7A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -188,7 +194,8 @@
 				781C600C240E8E13002FADA8 /* Storyboards */,
 				7811A236240977990065BE56 /* Start */,
 				78E0449F24098CA3000A7789 /* Login */,
-				781C600F240E9009002FADA8 /* Peoples-List */,
+				781C600F240E9009002FADA8 /* PeoplesList */,
+				781C6017240EBFE2002FADA8 /* PeopleDetails */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -255,20 +262,30 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		781C600F240E9009002FADA8 /* Peoples-List */ = {
+		781C600F240E9009002FADA8 /* PeoplesList */ = {
 			isa = PBXGroup;
 			children = (
 				781C6010240E9039002FADA8 /* PeoplesListViewController.swift */,
 				781C6012240E9305002FADA8 /* PeoplesListViewModel.swift */,
 			);
-			path = "Peoples-List";
+			path = PeoplesList;
+			sourceTree = "<group>";
+		};
+		781C6017240EBFE2002FADA8 /* PeopleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				781C6018240EC021002FADA8 /* PeopleDetailsViewController.swift */,
+				781C601A240EC054002FADA8 /* PeopleDetailsViewModel.swift */,
+			);
+			path = PeopleDetails;
 			sourceTree = "<group>";
 		};
 		78973AA9240D3EB900BE551D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				781C6015240E9800002FADA8 /* LoginDIContainer.swift */,
 				78973AAA240D3EDE00BE551D /* StartDIContainer.swift */,
+				781C6015240E9800002FADA8 /* LoginDIContainer.swift */,
+				781C601C240EC55E002FADA8 /* PeoplesListDIContainer.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -459,11 +476,14 @@
 				7811A22924094ED20065BE56 /* BaseAPIResponse.swift in Sources */,
 				7811A23524095C3C0065BE56 /* PeopleUseCase.swift in Sources */,
 				78CF33C9240D7DF500D4C401 /* AuthUseCase.swift in Sources */,
+				781C601D240EC55E002FADA8 /* PeoplesListDIContainer.swift in Sources */,
 				7811A22F2409551C0065BE56 /* PeopleRepository.swift in Sources */,
 				78CF33CF240D8BF100D4C401 /* Connectivity.swift in Sources */,
 				78D0C6262409A46F00F2D547 /* UIViewController.swift in Sources */,
+				781C6019240EC021002FADA8 /* PeopleDetailsViewController.swift in Sources */,
 				781C6013240E9305002FADA8 /* PeoplesListViewModel.swift in Sources */,
 				7811A22D240950B80065BE56 /* People.swift in Sources */,
+				781C601B240EC054002FADA8 /* PeopleDetailsViewModel.swift in Sources */,
 				78973AAB240D3EDE00BE551D /* StartDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

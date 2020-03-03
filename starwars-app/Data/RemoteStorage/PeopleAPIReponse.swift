@@ -10,8 +10,8 @@ import Foundation
 
 struct PeopleAPIReponse: Codable {
     let name: String
-    let height: Double
-    let mass: Double
+    let height: String
+    let mass: String
     let hair_color: String
     let skin_color: String
     let eye_color: String

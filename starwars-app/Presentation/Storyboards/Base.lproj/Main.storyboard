@@ -41,7 +41,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="T8A-PL-vJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="6xc-T6-Uqp"/>
                             <constraint firstItem="T8A-PL-vJS" firstAttribute="top" secondItem="csS-Wb-w7g" secondAttribute="bottom" constant="3.5" id="NoN-Yw-oIE"/>
@@ -138,7 +138,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <constraints>
                             <constraint firstItem="h6L-1S-Fi4" firstAttribute="trailing" secondItem="27b-fG-iS4" secondAttribute="trailing" constant="20" id="DS9-96-l1o"/>
                             <constraint firstItem="Ott-w5-eB0" firstAttribute="top" secondItem="h6L-1S-Fi4" secondAttribute="top" constant="20" id="TH1-Jl-laI"/>
